@@ -1,0 +1,38 @@
+<main class="mt-0">
+    <!-- <section class="module bg-dark-60 portfolio-page-header " data-background="assets/images/portfolio/distintivos.jpg"> -->
+    <section class="absolute w-full h-1/4 bg-center bg-cover z-0" style="background-image: url(assets/images/portafolio/jesucristo-caminando-sobre-agua.jpg)">
+        <!-- <div class="container h-11"> -->
+            <!-- <div class=" h-11"> -->
+                <div class="grid grid-cols-12 "> <!-- grid grid-cols-12-->
+                    <h2 class="col-start-3 col-span-8 min-h-full  h-full font-alt">Nuestra Historia</h2> <!-- col-start-3 col-span-8  h-full -->
+                    <div style=" line-height: 0px" class="col-start-3 col-span-8 font-serif">Eben-Ezer, hasta aquí nos ha
+                        ayudado el Señor (1 Samuel 7:12). <!--col-start-3 col-span-8 -->
+                    </div>
+                </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    </section>
+    <!-- <img class="main-banner mt-10" (scroll)="onScroll($event)"
+    src="assets/images/portafolio/Historia.jpeg" alt="Intento imagen1"> -->
+    <!-- <img class="main-banner mt-10" (scroll)="onScroll($event)"
+    src="assets/images/portafolio/jesucristo-caminando-sobre-agua.jpg" alt="Intento imagen1"> -->
+    <!-- <img src="static/portafolio/Historia.jpeg" alt="Intento imagen2"> -->
+    <!-- <img src="https://d1ickm5p4929da.cloudfront.net/libros/La_Oracion.jpg" alt=""> -->
+    <section class="module" id="about">
+        <div class="container">
+            <div class="grid grid-cols-12 gap-4 mt-2">
+                <!-- <div class="col-sm-8 col-sm-offset-2"> -->
+                <article class="col-start-3 col-span-8 ">
+                    <mat-accordion multi class="gap-y-9">
+                        <mat-expansion-panel *ngFor="let item of historiaData">
+                            <mat-expansion-panel-header class="mat-expanded border-b-2 border-Amber-900 h-11">
+                                {{ item.title }}
+                            </mat-expansion-panel-header>
+                            <p [innerHtml]="item.content"></p>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,18 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s;
+}
+.navbar.fixed {
+    background-color: rgb(84, 84, 84);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.opacityactive{
+    opacity: 1;
+}
+.navbar:hover .dropdown {
+    display: block;
+}
+
