@@ -1,0 +1,129 @@
+<main >
+    <!--HEADER PAGE-->
+    <div class="relative isolate px-6 pt-14 lg:px-8 object-center bg-gradient-to-b from-violet-400 to-blue-500">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div class="text-center">
+                <h1 class="text-4xl font-semibold tracking-tight text-slate-100 sm:text-6xl">Recomendacion de iglesias</h1>
+                <p class="mt-6 text-lg italic leading-8 text--600 text-slate-200">Así nos lo ha mandado el Señor: “Te
+                    he puesto por luz para las naciones, a fin de que lleves mi salvación hasta los confines de la
+                    tierra“. <br>
+                    Hechos 13:47</p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="#"
+                        class="rounded-md  bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        Confesion de Fe</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Distintivos<span
+                            aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+    </div>
+    <!--DESCRIPCION DE LA SECCION PRINCIPAL-->
+    <section class="bg-indigo-800 ">
+        <div class=" bg-slate-100  flex flex-col  items-center p-10 border-t-2 border-b-2 border-indigo-950 ">
+            <p class="ng-binding ng-scope italic">Los siguientes distintivos expresan nuestras convicciones y peculiaridades, muchos de ellos siendo un resumen de la Confesión de Londres de 1689, la cual suscribimos sustancialmente. Tanto estos distintivos como la Confesión de
+                Londres son documentos subordinados a las Escrituras y por tanto son corregibles a la luz de la Palabra de Dios.</p>
+        </div>
+    </section>
+    <!--DATOS CONTENIDO DE LA APLICACION-->
+    <section class="mt-8">
+        <div class="container grid grid-cols-12  mx-0">
+            <article class="col-start-3 col-span-8">
+                
+                <mat-form-field>
+                    <mat-label>Filter</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+                </mat-form-field>
+                <mat-accordion multi>
+                    <mat-expansion-panel *ngFor="let item of iglesiasPaginacion">
+                        <mat-expansion-panel-header>
+                            {{ item.title }}
+                        </mat-expansion-panel-header>
+                        <p><strong>Liderazgo:</strong></p>
+                        <p [innerHtml]="item.liderazgo"></p>
+                        <p><strong>Direccion:</strong></p>
+                        <p [innerHtml]="item.direccion"></p>
+                        <p><strong>Telefono:</strong></p>
+                        <p [innerHtml]="item.movil"></p>
+                        <p><strong>Correo:</strong></p>
+                        <p [innerHtml]="item.email"></p>
+                        <p><strong>WebPage:</strong></p>
+                        <p [innerHtml]="item.webpage"></p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <mat-paginator #paginator class="demo-paginator" (page)="handlePageEvent($event)" [length]="length"
+                    [pageSize]="pageSize" [disabled]="disabled" [showFirstLastButtons]="showFirstLastButtons"
+                    [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []" [hidePageSize]="hidePageSize"
+                    [pageIndex]="pageIndex" aria-label="Select page">
+                </mat-paginator>
+            </article>
+        </div>
+    </section>
+</main>
+
+
+
+
+<!---------------------------------------Template DATA------------------>
+<!-- <div class="main">
+    <section class="module bg-dark-60 portfolio-page-header" data-background="assets/images/portfolio/distintivos.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">RECOMENDACIÓN DE IGLESIAS</h2>
+                    <div style="line-height: 0px" class="module-subtitle font-serif">Así nos lo ha mandado el Señor: “Te
+                        he puesto por luz para las naciones, a fin de que lleves mi salvación hasta los confines de la
+                        tierra“.
+                        Hechos 13:47</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module" id="about" style="padding-top: 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <mat-form-field>
+                        <mat-label>Filter</mat-label>
+                        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+                    </mat-form-field>
+                    <mat-accordion multi>
+                        <mat-expansion-panel *ngFor="let item of iglesiasPaginacion">
+                            <mat-expansion-panel-header>
+                                {{ item.title }}
+                            </mat-expansion-panel-header>
+                            <p><strong>Liderazgo:</strong></p>
+                            <p [innerHtml]="item.liderazgo"></p>
+                            <p><strong>Direccion:</strong></p>
+                            <p [innerHtml]="item.direccion"></p>
+                            <p><strong>Telefono:</strong></p>
+                            <p [innerHtml]="item.movil[0]"></p>
+                            <p><strong>Correo:</strong></p>
+                            <p [innerHtml]="item.email"></p>
+                            <p><strong>WebPage:</strong></p>
+                            <p [innerHtml]="item.webpage"></p>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <mat-paginator #paginator class="demo-paginator" (page)="handlePageEvent($event)" [length]="length"
+                        [pageSize]="pageSize" [disabled]="disabled" [showFirstLastButtons]="showFirstLastButtons"
+                        [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []" [hidePageSize]="hidePageSize"
+                        [pageIndex]="pageIndex" aria-label="Select page">
+                    </mat-paginator>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div> -->

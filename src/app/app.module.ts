@@ -12,6 +12,13 @@ import { AngularMaterialModule } from './angular-material.module';
 import { HistoriaComponent } from './components/historia/historia.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationService } from './service/location.service';
+import { DistintivosComponent } from './components/distintivos/distintivos.component';
+import { ConfesionComponent } from './components/confesion/confesion.component';
+import { IglesiasComponent } from './components/iglesias/iglesias.component';
+import { LibrosComponent } from './components/libros/libros.component';
+import { NavbartwoComponent } from './components/navbartwo/navbartwo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,15 +28,23 @@ import { LocationService } from './service/location.service';
     CardComponent,
     HeaderComponent,
     FooterComponent,
-    HistoriaComponent
+    HistoriaComponent,
+    DistintivosComponent,
+    ConfesionComponent,
+    IglesiasComponent,
+    LibrosComponent,
+    NavbartwoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    HttpClientModule,
+    // ReactiveFormsModule
   ],
-  providers: [LocationService],
+  // providers: [LocationService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

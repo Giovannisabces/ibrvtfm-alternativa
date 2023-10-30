@@ -22,7 +22,6 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets/js/*.js",
               "src/assets",
               "src/assets/images",
               "src/assets/images/portafolio",
@@ -32,7 +31,6 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/nav.js"
             ]
           },
           "configurations": {

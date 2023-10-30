@@ -1,28 +1,46 @@
-<p>home-component works!</p>
-<!-- Barra de navegación -->
-<!-- Position Fixed me permite fijar un objeto sin reservar el espacio similar a absolute -->
-<nav class="navbar p-4 md:flex md:items-center md:justify-between">
-    <!-- Icono o imagen a la izquierda -->
-    <div class="flex items-center space-x-2 md:space-x-0">
-        <img src="icono.png" alt="Icono" class="h-8 w-8 md:hidden"> <!-- Reemplaza con tu imagen o icono -->
-        <h1 class="text-white text-2xl font-bold">Tu Sitio Web</h1>
-    </div>
-    <!-- Opciones de navegación a la derecha -->
-    <div class="space-x-4 md:space-x-8">
-        <div class="relative inline-block group">
-            <span class="text-white cursor-pointer">Nosotros</span>
-            <ul class="hidden space-y-2 absolute bg-black p-2 left-0 top-8 group-hover:block md:w-40">
-                <li><a href="#" class="text-white">Historia</a></li>
-                <li><a href="#" class="text-white">Confesión de fe</a></li>
-                <li><a href="#" class="text-white">Distintivos</a></li>
-            </ul>
+<main >
+    <!--HEADER PAGE-->
+    <div class="relative isolate px-6 pt-14 lg:px-8 object-center bg-gradient-to-b from-violet-400 bg-teal-100">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
         </div>
-        <a href="#" class="text-white">Iglesias recomendadas</a>
-        <div class="relative inline-block group">
-            <span class="text-white cursor-pointer">Recursos</span>
-            <ul class="hidden space-y-2 absolute bg-black p-2 left-0 top-8 group-hover:block md:w-40">
-                <li><a href="#" class="text-white">Libros</a></li>
-            </ul>
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div class="text-center">
+                <h1 class="text-4xl font-semibold tracking-tight text-slate-100 sm:text-6xl"> IGLESIA BAUTISTA <br> REFORMADA DE BAUTISTA </h1>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
         </div>
     </div>
-</nav>
+    <!---------------------------------------------------------------------------       SECCIONES HOME       ---------------------------------------------------------->
+    <!-- Icon Blocks -->
+    <section class="bg-slate-100  py-60 border-b-2 border-slate-300">
+        <h2 class="mx-auto w-1/2 text-center text-5xl mb-8">BIENVENIDO</h2>
+        <p class="italic mx-auto w-1/2 text-center text-xl"> Nos alegra que estés visitando nuestra web, y esperamos darte la información que necesitas para conocernos. Queremos compartir contigo el más precioso regalo de parte de Dios: el Evangelio del Señor Jesucristo. Te invitamos a que recorras las páginas de esta web, y en caso de tener alguna pregunta o inquietud sobre nosotros, nos escribas a iglesiabautistareformadags@gmail.com</p>
+    </section>
+    <section class="bg-slate-100  py-40 border-b-2 border-slate-300">
+        <h3 class="mx-auto w-1/2 text-center text-5xl mb-8">CONGREGACIÓN</h3>
+        <p class="italic mx-auto w-1/2 text-center text-slate-500 text-x">Con gozo seguimos el mandato de nuestro Dios y Señor, de congregarnos para exponer la palabra viva y eficaz de nuestro Dios compartida a nosotro a través de la Santa Biblia. La cual nos exhorta, corrige, anima y reconforta.</p>
+        <article class="mt-16 flex flex-wrap justify-center gap-40">
+            <div class="w-32 h-28 ">      <img src="assets/images/congregaciones/escueladominical.png" alt=""> 
+                <h4 class="">Escuela Dominical</h4> 
+                <p class="text-center">Inicia 11:00 Hrs.</p> </div>
+            <div class="w-32 h-28">  <img src="assets/images/congregaciones/biblia_estudio.jpeg" alt="">
+                <h4 class="text-center">CULTO DE ALABANZA Y ADORACIÓN</h4>
+                <p class="text-center">Inicia 11:45 Hrs.</p> </div>
+            <div class="w-32 h-28 bg-cover "> <img src="assets/images/congregaciones/adoracion.jpg" alt=""> 
+                <h4 class="text-center">REUNIÓN DE ORACIÓN</h4> 
+                <p class="text-center"> Inicia 19:15 Hrs.</p> </div>
+        </article>
+    </section>
+    <section>
+        
+    </section>
+</main>
