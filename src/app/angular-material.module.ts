@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+// import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -12,7 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 const materialModules = [
   MatExpansionModule,
   MatButtonModule,
-  MatCardModule,
+  // MatCardModule,
   MatPaginatorModule,
   MatInputModule,
   MatFormFieldModule
