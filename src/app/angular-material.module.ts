@@ -12,7 +12,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 const materialModules = [
   MatExpansionModule,
   MatButtonModule,
-  // MatCardModule,
   MatPaginatorModule,
   MatInputModule,
   MatFormFieldModule

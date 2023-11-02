@@ -24,6 +24,9 @@ export class NavbartwoComponent implements OnInit {
       console.log("Hizo Click-2");
     });
   }
-  
+  funcionTest(){
+    console.log("Test");
+    this.menu?.classList.toggle("hidden");
+  };
 
 }

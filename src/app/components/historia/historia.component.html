@@ -21,10 +21,10 @@
                 <h1 class="text-4xl font-semibold tracking-tight text-slate-100 sm:text-6xl">Nuestra Historia</h1>
                 <p class="mt-6 text-lg leading-8 text--600 text-slate-200">hasta aquí nos ha ayudado el Señor (1 Samuel 7:12).</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
-                    <a href="#"
+                    <a href="/confesion" routerLink="/confesion"
                         class="rounded-md  bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Nuestra Confesion de Fe</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Distintivos <span
+                    <a href="/confesion" routerLink="/distintivos"  class="text-sm font-semibold leading-6 text-gray-900">Distintivos <span
                             aria-hidden="true">→</span></a>
                 </div>
             </div>
@@ -36,22 +36,22 @@
             </div>
         </div>
     </div>
-    <section class="border-indigo-800 ">
-        <div class=" bg-teal-200  flex flex-col  items-center p-10 border-t-2 border-b-2 border-indigo-950 ">
+    <section >
+        <div class=" bg-slate-100  flex flex-col  items-center p-10 rounded-xl shadow-md ">
             <h3 class="p-2  rounded-lg shadow-white shadow-2xl">El Señor comenzo y sostiene su iglesia</h3>
             <p  class="w-1/2 rounded-lg shadow-white shadow-2xl">Nuestros pasos los compartimos con gozo a nuestros hermanos de toda nacion para la gloria de Dios</p>
         </div>
     </section>
 
     <section class="module" id="about">
-        <div class="container grid grid-cols-12  mx-0">
+        <div class="container grid grid-cols-12 mt-10 mx-0">
             <!-- <div class="grid grid-cols-12 mt-2"> -->
                 <!-- <div class="col-sm-8 col-sm-offset-2"> -->
                 <article class=" col-start-3 col-span-8 ">
                     <mat-accordion multi>
                         <!-- <mat-expansion-panel *ngFor="let item of historiaData" class="mt-4 bg-slate-800 border-orange-600"> -->
-                        <mat-expansion-panel *ngFor="let item of historiaData" class="shadow-2xl bg-red-50 border-orange-600">    
-                            <mat-expansion-panel-header class="mat-expanded border-b-2 border-Amber-900 h-11">
+                        <mat-expansion-panel *ngFor="let item of historiaData" class="shadow-2xl bg-red-50 py-4 px-5">    
+                            <mat-expansion-panel-header class="mat-expanded border-b-2 border-Amber-900 ">
                                 {{ item.title }}
                             </mat-expansion-panel-header>
                             <p [innerHtml]="item.content"></p>

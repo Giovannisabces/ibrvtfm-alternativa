@@ -1,17 +1,17 @@
 <!-- <div class="bg-white " style="background-image: url(assets/images/portafolio/jesucristo-caminando-sobre-agua.jpg)"> -->
-<div class="bg-white hidden">
+<div class="bg-white ">
 <!-- <div class="bg-gray-800 background-image "> -->
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
+                <a href="/" class="-m-1.5 p-1.5 ">
+                    <span class="sr-only">Iglesia Bautista de Valencia</span>
                     <img class="h-16 w-auto" src="assets/images/logos/logo-iglesia.png"
                         alt="">
                 </a>
             </div>
             <div  class="flex lg:hidden ">
-                <button id="buttonnavopen " type="button"
+                <button id="buttonnavopen " type="button" (click)="funcionTest()"
                     class=" -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -22,11 +22,11 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="#" routerLink="/confesion" class="text-sm font-semibold leading-6 text-gray-900">Confesion de fe</a>
-                <a href="#" routerLink="/historia" class="text-sm font-semibold leading-6 text-gray-900">Historia</a>
-                <a href="#" routerLink="/distintivos" class="text-sm font-semibold leading-6 text-gray-900">Distintivos</a>
-                <a href="#" routerLink="/libros" class="text-sm font-semibold leading-6 text-gray-900">Recursos-Libros</a>
-                <a href="#" routerLink="/iglesias" class="text-sm font-semibold leading-6 text-gray-900">Iglesias Recomendadas</a>
+                <a href="/confesion" routerLink="/confesion" class="text-sm font-semibold leading-6 text-gray-900">Confesion de fe</a>
+                <a href="/historia" routerLink="/historia" class="text-sm font-semibold leading-6 text-gray-900">Historia</a>
+                <a href="/distintivos" routerLink="/distintivos" class="text-sm font-semibold leading-6 text-gray-900">Distintivos</a>
+                <a href="/libros" routerLink="/libros" class="text-sm font-semibold leading-6 text-gray-900">Recursos-Libros</a>
+                <a href="/iglesias" routerLink="/iglesias" class="text-sm font-semibold leading-6 text-gray-900">Iglesias Recomendadas</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a href="/" class="text-sm font-semibold leading-6 text-gray-900"><!-- <span aria-hidden="true">&rarr;</span> --></a>
@@ -39,8 +39,8 @@
             <div id="menu"
                 class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div  class="flex items-center justify-between">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Your Company</span>
+                    <a href="/" class="-m-1.5 p-1.5 bg-slate-500 rounded-xl">
+                        <span class="sr-only">Iglesia Bautista de Valencia</span>
                         <img class="h-8 w-auto" src="assets/images/logos/logo-iglesia.png"
                             alt="">
                     </a>
@@ -55,10 +55,11 @@
                 <div  class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Historiaaa</a>
-                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Distintivos</a>
-                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Recursos-Libros</a>
-                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Iglesias Recomendadas</a>
+                            <a href="/confesion" routerLink="/confesion" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Confesion de fe</a>
+                            <a href="/historia" routerLink="/historia"  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Historia</a>
+                            <a href="/distintivos" routerLink="/distintivos"   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Distintivos</a>
+                            <a href="/libros" routerLink="/libros"    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Recursos-Libros</a>
+                            <a href="/iglesias" routerLink="/iglesias"  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Iglesias Recomendadas</a>
                         </div>
                         <div class="py-6">
                             <!-- <a href="#"class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"></a> -->
