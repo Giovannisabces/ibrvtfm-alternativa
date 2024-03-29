@@ -6,6 +6,7 @@ import { DistintivosComponent } from './components/distintivos/distintivos.compo
 import { ConfesionComponent } from './components/confesion/confesion.component';
 import { IglesiasComponent } from './components/iglesias/iglesias.component';
 import { LibrosComponent } from './components/libros/libros.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponentComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'confesion', component: ConfesionComponent},
   {path: 'iglesias', component: IglesiasComponent},
   {path: 'libros', component: LibrosComponent},
+  {path: 'videos', component: VideosComponent},
   {
     path: '**',
     redirectTo: "/"

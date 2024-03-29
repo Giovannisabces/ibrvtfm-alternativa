@@ -1,0 +1,57 @@
+<main class="w-full mx-auto pb-10 ">
+    <!--HEADER PAGE-->
+    <section class="relative isolate px-6 pt-14 lg:px-8 object-center bg-gradient-to-b from-violet-400 to-blue-500">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="text-center">
+          <h1 class="text-4xl font-semibold tracking-tight text-slate-100 sm:text-6xl">Semornes pasados</h1>
+          <p class="mt-6 text-lg italic leading-8 text--600 text-slate-200"> Visitenos en nuestro canal de YouTube</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/confesion" routerLink="/confesion"
+              class="rounded-md  bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Confesion de Fe</a>
+            <a href="/" routerLink="/" class="text-sm font-semibold leading-6 text-gray-900">Principal <span
+                aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true">
+        <div
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+      </div>
+    </section>
+    <!-- <section class="module grid grid-cols-12  mx-0" id="videos">
+      <div class="col-start-3 col-span-8">
+        <article class="book-card w-full lg:w-2/4 mx-auto mt-20 border-solid border-slate-400 rounded-md border-2 py-5 shadow-2xl" *ngFor="let book of books">
+              <div mat-card-avatar class="example-header-image"></div>
+              <h3 class="mx-auto text-2xl font-semibold px-10">{{ book.title }}</h3>
+              <p class="text-xs px-10">{{ book.serie }}</p>
+          <img ngClass="aspect-square w-3/4 sm:w-1/4 mx-auto" mat-card-sm-image class="mb-10 mt-10 " src="{{book.img}}" alt="Photo of Steva">
+            <mat-accordion class="w-full " multi>
+              <mat-expansion-panel ngClass="px-0 sm:px-5 mx-2" >
+                <mat-expansion-panel-header>
+                  Resumen
+                </mat-expansion-panel-header >
+                <p class="pt-4" [innerHtml]="book.content"></p>
+              </mat-expansion-panel>
+            </mat-accordion>
+        </article>
+      </div>
+    </section> -->
+    <section class="module grid grid-cols-12  mx-0">
+      <div class="col-start-3 col-span-8">
+        <article #asContainer>
+          <!-- Aqui insertare todas las cards -->
+        </article>
+      </div>
+    </section>
+  </main>

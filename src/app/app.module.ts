@@ -15,6 +15,7 @@ import { IglesiasComponent } from './components/iglesias/iglesias.component';
 import { LibrosComponent } from './components/libros/libros.component';
 import { NavbartwoComponent } from './components/navbartwo/navbartwo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VideosComponent } from './components/videos/videos.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     ConfesionComponent,
     IglesiasComponent,
     LibrosComponent,
-    NavbartwoComponent
+    NavbartwoComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
