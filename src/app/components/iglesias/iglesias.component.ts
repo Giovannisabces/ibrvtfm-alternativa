@@ -51,7 +51,6 @@ export class IglesiasComponent {
     //  Carga de datos desde la API 
     this.locationService.list().subscribe( data=> {
       /* if (this.iglesiasDataAux) */ this.iglesiasDataAux = JSON.parse(data.body);
-      // this.input=data;
       this.iglesiasData = this.iglesiasDataAux.reverse();
       this.updateLocation();
       console.info("Entrada data");
@@ -63,6 +62,11 @@ export class IglesiasComponent {
           map(() => true),
           catchError(() => of(false)),
         );
+
+      this.markerPositions = this.iglesiasData.map((data) =>{
+        let position: google.maps.LatLngLiteral = {lat:data.lat, lng:data.lng};
+        return position;
+      })
     });
   }
   ngOnInit(): void {
