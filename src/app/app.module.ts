@@ -14,9 +14,11 @@ import { ConfesionComponent } from './components/confesion/confesion.component';
 import { IglesiasComponent } from './components/iglesias/iglesias.component';
 import { LibrosComponent } from './components/libros/libros.component';
 import { NavbartwoComponent } from './components/navbartwo/navbartwo.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { VideosComponent } from './components/videos/videos.component';
 // import { ReactiveFormsModule } from '@angular/forms';
+// Import Google Maps
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { VideosComponent } from './components/videos/videos.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     AngularMaterialModule,
+    GoogleMapsModule,
     HttpClientModule,
+    HttpClientJsonpModule
     // ReactiveFormsModule
   ],
   // providers: [LocationService],

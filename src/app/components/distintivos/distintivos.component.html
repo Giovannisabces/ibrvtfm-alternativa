@@ -29,11 +29,11 @@
         </div>
     </div>
     <!--DESCRIPCION DE LA SECCION PRINCIPAL-->
-    <section class="bg-indigo-800 ">
-        <div class=" bg-slate-100  flex flex-col  items-center p-10 border-t-2 border-b-2 border-indigo-950 ">
+    <section class="bg-indigo-800 w-full">
+        <div class=" mx-auto text-balance max-w-3xl flex flex-col  items-center p-10 border-t-2 border-b-2 border-indigo-950 ">
             <p class="ng-binding ng-scope italic">Los siguientes distintivos expresan nuestras convicciones y peculiaridades, muchos de ellos siendo un resumen de la Confesión de Londres de 1689, la cual suscribimos sustancialmente. Tanto estos distintivos como la Confesión de
                 Londres son documentos subordinados a las Escrituras y por tanto son corregibles a la luz de la Palabra de Dios.</p>
-            <p class="ng-binding ng-scope italic"><strong>SOMOS CRISTIANOS EVANGÉLICOS</strong> y proclamamos el Evangelio de salvación solo por la Gracia de Dios, solo mediante la fe y solo en la Obra de Cristo. Creemos que los pecadores que ponen su fe en Cristo son completa
+            <p class="ng-binding ng-scope italic py-4"><strong>SOMOS CRISTIANOS EVANGÉLICOS</strong> y proclamamos el Evangelio de salvación solo por la Gracia de Dios, solo mediante la fe y solo en la Obra de Cristo. Creemos que los pecadores que ponen su fe en Cristo son completa
                 y finalmente justificados, de manera que no les es requerida una obediencia adicional para mantener esa justificación (Efesios 2:8-9; 1 Corintios 15:3ss; Romanos 3:21-26). Suscribimos por tanto las máximas de la Reforma Protestante:</p>
             <ul class="py-4">
                 <li class="ng-binding ng-scope">Sola Scriptura (Solo las Escrituras son nuestra norma de fe y práctica)</li>
@@ -49,13 +49,13 @@
     <!--DATOS CONTENIDO DE LA APLICACION-->
     <section class="mt-8">
         <div class="container grid grid-cols-12  mx-0">
-            <article class="col-start-3 col-span-8">
+            <article class="col-start-4 col-span-8">
                 <mat-accordion multi>
-                    <mat-expansion-panel *ngFor="let item of distintivosData">
+                    <mat-expansion-panel class="py-5 mb-52" *ngFor="let item of distintivosData">
                         <mat-expansion-panel-header class="mat-expanded border-b-1 border-Amber-900 h-11">
                             {{ item.title }}
                         </mat-expansion-panel-header>
-                        <p [innerHtml]="item.content"></p>
+                        <p class="py-5" [innerHtml]="item.content"></p>
                     </mat-expansion-panel>
                 </mat-accordion>
             </article>

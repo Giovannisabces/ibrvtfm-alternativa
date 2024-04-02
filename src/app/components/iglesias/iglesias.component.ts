@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { LocationService } from 'src/app/service/location.service';
-
 import { Location } from 'src/app/models/location';
+
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 //  Usados para pruebas en local
 // import { iglesiasAsociadas } from 'src/app/shared/data/iglesiasasociadas.data';
@@ -36,17 +39,41 @@ export class IglesiasComponent {
   disabled = false;
   pageEvent: PageEvent= new PageEvent();
   search:boolean = false;
-  constructor( private locationService: LocationService) {
+  // Variables Maps
+  apiLoaded: Observable<boolean> = new Observable<false>();
+  center: google.maps.LatLngLiteral = {lat: 40, lng: -20};
+  zoom = 2;
+  markerOptions: google.maps.MarkerOptions = {draggable: false};
+  markerPositions: google.maps.LatLngLiteral[] = [];
+  input:any[] = [];
+  constructor( private locationService: LocationService,
+    httpClient: HttpClient) {
     //  Carga de datos desde la API 
     this.locationService.list().subscribe( data=> {
-      this.iglesiasDataAux = data;
+      /* if (this.iglesiasDataAux) */ this.iglesiasDataAux = JSON.parse(data.body);
+      // this.input=data;
       this.iglesiasData = this.iglesiasDataAux.reverse();
-      this.updateLocation(); 
+      this.updateLocation();
+      console.info("Entrada data");
+      console.log(data)
+      console.log(this.iglesiasDataAux[1])
+      //  Cargar la API Maps
+      this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=AIzaSyAxcbCBuLkG1HzNItG379nksSE1oYKDets', 'callback')
+        .pipe(
+          map(() => true),
+          catchError(() => of(false)),
+        );
     });
-    console.log(this.iglesiasData )
   }
   ngOnInit(): void {
     // this.updateLocation(); // Solo para modo DEV
+  }
+  addMarker(event: google.maps.MapMouseEvent ) {
+    if ((event.latLng!=null) && !(event==null)){
+      this.iglesiasData.forEach((data) =>{
+        this.markerPositions.push(data);
+      })
+      this.markerPositions.push(event.latLng.toJSON());}
   }
 
   updateLocation(): void {
