@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Location } from '../models/location';
+// import { Location } from '../models/location';
 import { ResponseLocation } from '../components/shared/interfaces/ResponseLocation';
 import { Observable } from 'rxjs';
 

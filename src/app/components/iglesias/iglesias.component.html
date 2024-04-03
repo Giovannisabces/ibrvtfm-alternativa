@@ -48,10 +48,23 @@
                     [center]="center"
                     [zoom]="zoom"
                         >
-                        <map-marker *ngFor="let markerPosition of markerPositions"
-                              [position]="markerPosition"
-                              [options]="markerOptions"></map-marker>
+                        <map-marker 
+                        #marker="mapMarker"
+                        *ngFor="let markerPosition of markerPositions"
+                        [position]="markerPosition"
+                        [options]="markerOptions"
+                        ></map-marker>
+                    <!-- <map-marker
+                        (mapClick)="openInfoWindow(marker)"
+                            #marker="mapMarker"
+                            *ngFor="let point of points"
+                            [position]="point.position"
+                            [title]="point.title"
+                            [options]="markerOptions"
+                            (mapClick)="openInfoWindow(marker, point.info)"
+                            ></map-marker> -->
                     </google-map>
+                    <!-- <map-info-window [innerHTML]="infoContent" > Info Window content</map-info-window> -->
                 </div>
             </article>
             <article class="col-start-3 col-span-8">

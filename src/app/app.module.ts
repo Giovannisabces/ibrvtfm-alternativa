@@ -15,6 +15,7 @@ import { IglesiasComponent } from './components/iglesias/iglesias.component';
 import { LibrosComponent } from './components/libros/libros.component';
 import { NavbartwoComponent } from './components/navbartwo/navbartwo.component';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withJsonpSupport } from '@angular/common/http';
 import { VideosComponent } from './components/videos/videos.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 // Import Google Maps
@@ -43,8 +44,11 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HttpClientJsonpModule
     // ReactiveFormsModule
   ],
+  exports: [
+    IglesiasComponent
+  ],
   // providers: [LocationService],
-  providers: [],
+  providers: [provideHttpClient(withJsonpSupport())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
