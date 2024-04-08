@@ -20,6 +20,7 @@ import { VideosComponent } from './components/videos/videos.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 // Import Google Maps
 import { GoogleMapsModule } from '@angular/google-maps';
+import { PredicacionesComponent } from './components/predicaciones/predicaciones.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     IglesiasComponent,
     LibrosComponent,
     NavbartwoComponent,
-    VideosComponent
+    VideosComponent,
+    PredicacionesComponent
   ],
   imports: [
     BrowserModule,

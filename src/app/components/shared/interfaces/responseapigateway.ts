@@ -1,13 +1,13 @@
 // To parse this data:
 //
-//   import { Convert, ResponseLocation } from "./file";
+//   import { Convert, ResponseApiGateway } from "./file";
 //
-//   const responseLocation = Convert.toResponseLocation(json);
+//   const responseApiGateway = Convert.toResponseApiGateway(json);
 //
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-export interface ResponseLocation {
+export interface ResponseApiGateway {
     statusCode:    number;
     headers:       Headers;
     body:          string;
@@ -23,12 +23,12 @@ export interface Headers {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-    public static toResponseLocation(json: string): ResponseLocation {
-        return cast(JSON.parse(json), r("ResponseLocation"));
+    public static toResponseApiGateway(json: string): ResponseApiGateway {
+        return cast(JSON.parse(json), r("ResponseApiGateway"));
     }
 
-    public static responseLocationToJson(value: ResponseLocation): string {
-        return JSON.stringify(uncast(value, r("ResponseLocation")), null, 2);
+    public static responseApiGatewayToJson(value: ResponseApiGateway): string {
+        return JSON.stringify(uncast(value, r("ResponseApiGateway")), null, 2);
     }
 }
 
@@ -185,7 +185,7 @@ function r(name: string) {
 }
 
 const typeMap: any = {
-    "ResponseLocation": o([
+    "ResponseApiGateway": o([
         { json: "statusCode", js: "statusCode", typ: 0 },
         { json: "headers", js: "headers", typ: r("Headers") },
         { json: "body", js: "body", typ: "" },
