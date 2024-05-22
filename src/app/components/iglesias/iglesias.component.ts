@@ -153,7 +153,8 @@ export class IglesiasComponent {
     // this.handlePageEvent(this.pageEvent);              // Se crea un evento para generar la paginación.
   }
   //Version demo
-  openInfoWindow(marker: MapMarker) {
+  openInfoWindow(marker: MapMarker, markerInfo:string) {
+    this.infoContent = markerInfo;  
     this.infoWindow.open(marker);
   };
   // Version con info
