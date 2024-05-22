@@ -38,7 +38,7 @@
     </section>
     <!--DATOS CONTENIDO DE LA APLICACION-->
     <section *ngIf="apiLoaded | async" class="mt-8">
-        <div class="container grid grid-cols-12  mx-0">
+        <div class="container grid grid-cols-12  mx-auto">
             <article class="col-start-2 col-span-12">
                 <div *ngIf="apiLoaded | async">
                     <google-map 
