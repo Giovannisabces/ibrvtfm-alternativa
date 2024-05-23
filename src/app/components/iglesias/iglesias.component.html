@@ -39,8 +39,8 @@
     <!--DATOS CONTENIDO DE LA APLICACION-->
     <section *ngIf="apiLoaded | async" class="mt-8">
         <div class="container grid grid-cols-12  mx-auto">
-            <article class="col-start-2 col-span-12">
-                <div *ngIf="apiLoaded | async">
+            <article class="col-start-1 col-span-12">
+                <div class="flex justify-center" *ngIf="apiLoaded | async">
                     <google-map 
                     height="400px"
                     width="350px"
@@ -55,15 +55,6 @@
                         [options]="markerOptions"
                         (mapClick)="openInfoWindow(marker, point.info)"
                         ></map-marker>
-                        <!-- <map-marker
-                            *ngFor="let markerPosition of markerPositions"
-                            #marker="mapMarker"
-                            *ngFor="let point of points"
-                            [position]="point.position"
-                            [title]="point.title"
-                            [options]="markerOptions"
-                            (mapClick)="openInfoWindow(marker, point.info)"
-                            ></map-marker> -->
                             <map-info-window [innerHTML]="infoContent" > Info Window content</map-info-window>
                     </google-map>
                 </div>
@@ -100,58 +91,3 @@
         </div>
     </section>
 </main>
-
-
-
-
-<!---------------------------------------Template DATA------------------>
-<!-- <div class="main">
-    <section class="module bg-dark-60 portfolio-page-header" data-background="assets/images/portfolio/distintivos.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <h2 class="module-title font-alt">RECOMENDACIÓN DE IGLESIAS</h2>
-                    <div style="line-height: 0px" class="module-subtitle font-serif">Así nos lo ha mandado el Señor: “Te
-                        he puesto por luz para las naciones, a fin de que lleves mi salvación hasta los confines de la
-                        tierra“.
-                        Hechos 13:47</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="module" id="about" style="padding-top: 80px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <mat-form-field>
-                        <mat-label>Filter</mat-label>
-                        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-                    </mat-form-field>
-                    <mat-accordion multi>
-                        <mat-expansion-panel *ngFor="let item of iglesiasPaginacion">
-                            <mat-expansion-panel-header>
-                                {{ item.title }}
-                            </mat-expansion-panel-header>
-                            <p><strong>Liderazgo:</strong></p>
-                            <p [innerHtml]="item.liderazgo"></p>
-                            <p><strong>Direccion:</strong></p>
-                            <p [innerHtml]="item.direccion"></p>
-                            <p><strong>Telefono:</strong></p>
-                            <p [innerHtml]="item.movil[0]"></p>
-                            <p><strong>Correo:</strong></p>
-                            <p [innerHtml]="item.email"></p>
-                            <p><strong>WebPage:</strong></p>
-                            <p [innerHtml]="item.webpage"></p>
-                        </mat-expansion-panel>
-                    </mat-accordion>
-                    <mat-paginator #paginator class="demo-paginator" (page)="handlePageEvent($event)" [length]="length"
-                        [pageSize]="pageSize" [disabled]="disabled" [showFirstLastButtons]="showFirstLastButtons"
-                        [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []" [hidePageSize]="hidePageSize"
-                        [pageIndex]="pageIndex" aria-label="Select page">
-                    </mat-paginator>
-                </div>
-            </div>
-
-        </div>
-    </section>
-</div> -->
