@@ -40,10 +40,10 @@
     <section *ngIf="apiLoaded | async" class="mt-8">
         <div class="container grid grid-cols-12  mx-auto">
             <article class="col-start-1 col-span-12">
-                <div class="flex justify-center" *ngIf="apiLoaded | async">
+                <div class="flex justify-center w-full px-10" *ngIf="apiLoaded | async">
                     <google-map 
-                    height="400px"
-                    width="350px"
+                    height="55vh"
+                    width="80vw"
                     [center]="center"
                     [zoom]="zoom"
                         >
@@ -59,7 +59,7 @@
                     </google-map>
                 </div>
             </article>
-            <article class="col-start-3 col-span-8">
+            <!-- <article class="col-start-3 col-span-8">
                 
                 <mat-form-field>
                     <mat-label>Filter</mat-label>
@@ -87,7 +87,7 @@
                     [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []" [hidePageSize]="hidePageSize"
                     [pageIndex]="pageIndex" aria-label="Select page">
                 </mat-paginator>
-            </article>
+            </article> -->
         </div>
     </section>
 </main>
