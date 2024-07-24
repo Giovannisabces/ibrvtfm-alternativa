@@ -16,8 +16,8 @@ const routes: Routes = [
   {path: 'confesion', component: ConfesionComponent},
   {path: 'iglesias', component: IglesiasComponent},
   {path: 'libros', component: LibrosComponent},
-  {path: 'videos', component: VideosComponent},
-  {path: 'predicaciones', component: PredicacionesComponent},
+  {path: 'predicaciones', component: VideosComponent},
+  // {path: 'predicaciones', component: PredicacionesComponent},
   {
     path: '**',
     redirectTo: "/"
